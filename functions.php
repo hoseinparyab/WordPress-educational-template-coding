@@ -45,7 +45,7 @@ function post_type_pishro_tv()
         'name'               => __('وبسایت آموزشی'),
         'singular_name'      => __('وبسایت آموزشی'),
         'menu_name'          => __('وبسایت آموزشی'),
-        'name_admin_bar'     => __('بسایت آموزشی'),
+        'name_admin_bar'     => __('وبسایت آموزشی'),
         'add_new'            => __(' افزودن جدید'),
         'add_new_item'       => __('پست مخصوص ویدیوهای آموزشی'),
         'new_item'           => __('پست جدید'),
@@ -77,3 +77,34 @@ function post_type_pishro_tv()
     register_post_type('tv', $args);
 }
 add_action('init', 'post_type_pishro_tv');
+
+
+
+// اضافه کردن تاکسونومی برای پست تایپ وبسافتTV
+function create_taxonomies_for_tv()
+{
+    $labels = array(
+        'name'              => _x('دسته بندی', 'دسته بندی'),
+        'singular_name'     => _x('دسته بندی پست ها ', 'دسته بندی'),
+        'search_items'      => __('جستجویه دسته'),
+        'all_items'         => __('تمام دسته ها'),
+        'parent_item'       => __('زیر دسته'),
+        'parent_item_colon' => __('Parent Genre:'),
+        'edit_item'         => __('ویرایش دسته'),
+        'update_item'       => __('بروزرسانی دسته'),
+        'add_new_item'      => __('افزودن دسته جدید'),
+        'new_item_name'     => __('نام جدید دسته'),
+        'menu_name'         => __('دسته بندی'),
+    );
+
+    $ar = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+    );
+
+    register_taxonomy('cat_pishro_tv', 'tv', $ar);
+}
+add_action('init', 'create_taxonomies_for_tv');
