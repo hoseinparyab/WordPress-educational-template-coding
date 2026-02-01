@@ -11,83 +11,9 @@
 <div class="line"></div>
 
 
-<section class="tv">
-    <div class="container">
-        <div class="tv-head">
-            <div class="tv-title">
-                <h2>وبسافت TV</h2>
-                <h5>تلویزیون وبسافت3</h5>
-            </div>
-
-            <div class="tv-link">
-                <a href="#">ویدئوهای بیشتر</a>
-            </div>
-        </div>
-
-        <div class="box-tv">
-            <div class="tv-right">
-                <div class="first-post">
-                    <a href="#">
-                        <figure>
-                            <img src="<?php echo get_template_directory_uri() . '/img/f.png' ?>">
-                            <i class="fas fa-play-circle"></i>
-                        </figure>
-                    </a>
-                </div>
-            </div>
-
-            <div class="tv-left">
-                <div class="other-post">
-                    <a href="#">
-                        <figure>
-                            <img src="<?php echo get_template_directory_uri() . '/img/x.png' ?>">
-                            <i class="fas fa-play"></i>
-                            <h2>بهترین زبان برنامه نویسی تحت وب برای شروع در ایران</h2>
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="other-post">
-                    <a href="#">
-                        <figure>
-                            <img src="<?php echo get_template_directory_uri() . '/img/xx.png' ?>">
-                            <i class="fas fa-play"></i>
-                            <h2>بهترین زبان برنامه نویسی تحت وب برای شروع در ایران</h2>
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="other-post">
-                    <a href="#">
-                        <figure>
-                            <img src="<?php echo get_template_directory_uri() . '/img/xxx.png' ?>">
-                            <i class="fas fa-play"></i>
-                            <h2>بهترین زبان برنامه نویسی تحت وب برای شروع در ایران</h2>
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="other-post">
-                    <a href="#">
-                        <figure>
-                            <img src="<?php echo get_template_directory_uri() . '/img/xxxx.png' ?>">
-                            <i class="fas fa-play"></i>
-                            <h2>بهترین زبان برنامه نویسی تحت وب برای شروع در ایران</h2>
-                        </figure>
-                    </a>
-                </div>
-
-                <div class="more-tv">
-                    <a href="#">ویدئوهای بیشتر</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<div class="line"></div>
+  <?php
+  require_once 'inc/template/tv.php'
+  ?>
 
 
 

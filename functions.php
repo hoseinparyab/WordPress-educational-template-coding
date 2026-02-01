@@ -24,6 +24,8 @@ function pishro_setup_theme()
     add_theme_support('automatic-feed-links');
     add_theme_support('post-thumbnails');
     add_image_size('article', 313, 181, true);
+    add_image_size('tv-large', 820, 548, true);
+    add_image_size('tv-small', 265, 165, true);
 
     register_nav_menus(
         array(
