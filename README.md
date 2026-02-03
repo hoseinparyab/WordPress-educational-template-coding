@@ -1,5 +1,7 @@
 # Pishro WordPress Theme
 
+![WordPress Logo](https://s.w.org/style/images/about/WordPress-logotype-standard.png)
+
 ![WordPress](https://img.shields.io/badge/WordPress-5.0+-blue.svg) ![PHP](https://img.shields.io/badge/PHP-7.4+-green.svg) ![License](https://img.shields.io/badge/License-GPL--2.0+-orange.svg)
 
 A custom WordPress theme designed for educational purposes, featuring custom post types for TV shows and videos.
