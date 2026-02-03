@@ -250,7 +250,30 @@ a {
 .box-tv .tv-right .first-post figure img {
     max-width: 100%;
 }
-.box-tv .tv-right .first-post figure i {
+.box-tv .tv-right .first-post figure span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.5);
+    padding: 2px 16px;
+    color: #eaeaea;
+}
+.box-tv .tv-left .other-post figure span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.5);
+    padding: 0px 5px;
+    color: #eaeaea;
+    font-size: 12px;
+}
+.box-tv .tv-left .other-post figure span i {
+    margin-right:3px;
+}
+.box-tv .tv-right .first-post figure span i{
+    margin-right: 5px;
+}
+.box-tv .tv-right .first-post figure > i {
     position: absolute;
     top: 38%;
     left: 46%;
@@ -259,7 +282,7 @@ a {
     opacity: 0.9;
     transition: all .2s ease-in-out;
 }
-.box-tv .tv-right .first-post:hover i {
+.box-tv .tv-right .first-post:hover > i {
     font-size: 130px;
     top: 35%;
     left: 45%;
@@ -288,7 +311,7 @@ a {
 .tv-left .other-post a figure img {
     max-width: 100%;
 }
-.tv-left .other-post a figure i {
+.tv-left .other-post a figure > i {
     position: absolute;
     top: 22%;
     left: 43%;
@@ -435,13 +458,13 @@ a {
 .article-slider .owl-carousel .owl-nav button.owl-prev {
     left: -25px;
 }
-.owl-theme .owl-dots .owl-dot.active span {
+ .owl-theme .owl-dots .owl-dot.active span {
     background: #5caf21 !important;
     width: 20px !important;
     transition: all .4s ease-in-out;
 }
 
-/***************start wp***************/
+ /***************start wp***************/
 
 .adv {
     float: right;

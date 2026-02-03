@@ -23,7 +23,7 @@
                         'terms'=>'toturial',
                     ),*/
                 ));
-                if ($f_tv->have_posts()) {
+                if($f_tv->have_posts()) {
                     while ($f_tv->have_posts()) : $f_tv->the_post(); ?>
                         <div class="first-post">
                             <a href="<?php the_permalink(); ?>">
@@ -31,16 +31,26 @@
                                     <?php
                                     if (has_post_thumbnail()) {
                                         the_post_thumbnail('tv_large');
-                                    } else {
-                                    ?><img src="<?php echo get_template_directory_uri() . '/img/0.jpg' ?>"> <?php
-                                                                                                            }
-                                                                                                                ?>
+                                    }
+                                    else {
+                                        ?><img src="<?php echo get_template_directory_uri().'/img/0.jpg' ?>"> <?php
+                                    }
+                                    ?>
                                     <i class="fas fa-play-circle"></i>
+                                    <?php
+                                    $time = get_post_meta(get_the_ID() , 'pishro_video_tv_time' , true);
+                                    if (!empty($time)) {
+                                        ?><span><?php echo $time;?><i class="fas fa-play"></i> </span><?php
+                                    }
+                                    ?>
                                 </figure>
                             </a>
                         </div>
-                <?php
+                    <?php
                     endwhile;
+                }
+                else {
+                    echo "<p>مطلبی پیدا نشد</p>";
                 }
                 wp_reset_postdata();
                 ?>
@@ -53,28 +63,38 @@
                 $f_tv = new WP_Query(array(
                     'post_type' => 'tv',
                     'posts_per_page' => 4,
-                    'offset' => 1,
+                    'offset' =>1,
 
                 ));
-                if ($f_tv->have_posts()) {
-                    while ($f_tv->have_posts()) : $f_tv->the_post(); ?>
-                        <div class="other-post">
-                            <a href="<?php the_permalink(); ?>">
-                                <figure>
-                                    <?php
-                                    if (has_post_thumbnail()) {
-                                        the_post_thumbnail('tv_small');
-                                    } else {
-                                    ?><img src="<?php echo get_template_directory_uri() . '/img/0.jpg' ?>"> <?php
-                                                                                                    }
-                                                                                                        ?>
-                                    <i class="fas fa-play"></i>
-                                    <h2><?php the_title(); ?></h2>
-                                </figure>
-                            </a>
-                        </div>
+                if($f_tv->have_posts()) {
+                while ($f_tv->have_posts()) : $f_tv->the_post(); ?>
+                <div class="other-post">
+                    <a href="<?php the_permalink(); ?>">
+                        <figure>
+                            <?php
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail('tv_small');
+                            }
+                            else {
+                                ?><img src="<?php echo get_template_directory_uri().'/img/0.jpg' ?>"> <?php
+                            }
+                            ?>
+                            <i class="fas fa-play"></i>
+                            <?php
+                            $time = get_post_meta(get_the_ID() , 'pishro_video_tv_time' , true);
+                            if (!empty($time)) {
+                                ?><span><?php echo $time;?><i class="fas fa-play"></i> </span><?php
+                            }
+                            ?>
+                            <h2><?php the_title(); ?></h2>
+                        </figure>
+                    </a>
+                </div>
                 <?php
-                    endwhile;
+                endwhile;
+                }
+                else {
+                    echo "<p>مطلبی پیدا نشد</p>";
                 }
                 wp_reset_postdata();
                 ?>
@@ -89,4 +109,4 @@
     </div>
 </section>
 
-<div class="line"></div> 
+<div class="line"></div>
