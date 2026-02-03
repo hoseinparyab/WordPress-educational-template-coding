@@ -1,19 +1,19 @@
 <?php get_header(); ?>
 
+
 <section class="box-slider">
     <div id="main_slider" class="owl-carousel owl-theme">
-        <div class="item"><img src="<?php echo get_template_directory_uri() . '/img/1.png' ?>"> </div>
-        <div class="item"><img src="<?php echo get_template_directory_uri() . '/img/2.jpg' ?>"> </div>
+        <div class="item"><img src="<?php echo get_template_directory_uri().'/img/1.png' ?>"> </div>
+        <div class="item"><img src="<?php echo get_template_directory_uri().'/img/2.jpg' ?>"> </div>
     </div>
 </section>
 
 
 <div class="line"></div>
 
-
-  <?php
-  require_once 'inc/template/tv.php'
-  ?>
+<?php
+include_once 'inc/template/tv.php';
+?>
 
 
 
@@ -26,25 +26,27 @@
             </div>
 
             <div class="article-link">
-                <a href="#">مقالات بیشتر</a>
+                <a href="<?php echo get_post_type_archive_link('tv'); ?>">مقالات بیشتر</a>
             </div>
         </div>
 
         <div class="article-slider">
             <div id="multi_slider" class="owl-carousel owl-theme">
+
                 <?php
-                if (have_posts()) :
-                    while (have_posts()) : the_post() ?>;
-                <div class="item box-article">
-                    <?php the_post_thumbnail('article') ?>
-                    <h2><a href="<?php the_permalink()?>"><?php the_title(); ?></a> </h2>
-                    <p><?php the_excerpt(); ?></p>
-                    <div class="btn-more"><a href="<?php the_permalink()?>">بیشتر بخوانید</a> </div>
-                </div>
-               <?php
+                if ( have_posts() ) :
+                    while ( have_posts() ) : the_post(); ?>
+                        <div class="item box-article">
+                            <?php the_post_thumbnail('article'); ?>
+                            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> </h2>
+                            <p><?php the_excerpt(); ?></p>
+                            <div class="btn-more"><a href="<?php the_permalink(); ?>">بیشتر بخوانید</a> </div>
+                        </div>
+                    <?php
                     endwhile;
                 endif;
-                   ?>
+                ?>
+
 
             </div>
         </div>
@@ -68,7 +70,7 @@
 
         <div class="left-adv">
             <figure>
-                <img src="<?php echo get_template_directory_uri() . '/img/wd.png' ?>">
+                <img src="<?php echo get_template_directory_uri().'/img/wd.png' ?>">
             </figure>
         </div>
     </div>
@@ -98,7 +100,7 @@
             <div id="course_slider" class="owl-carousel owl-theme">
 
                 <div class="item box-course">
-                    <img src="<?php echo get_template_directory_uri() . '/img/c.png' ?>">
+                    <img src="<?php echo get_template_directory_uri().'/img/c.png' ?>">
                     <h2><a href="#">آموزش طراحی سایت حرفه ای پروژه محور</a> </h2>
                     <div class="desc">
                         <div class="teacher">
@@ -124,7 +126,7 @@
                 </div>
 
                 <div class="item box-course">
-                    <img src="<?php echo get_template_directory_uri() . '/img/ccc.png' ?>">
+                    <img src="<?php echo get_template_directory_uri().'/img/ccc.png' ?>">
                     <h2><a href="#">آموزش طراحی سایت حرفه ای پروژه محور</a> </h2>
                     <div class="desc">
                         <div class="teacher">
@@ -150,7 +152,7 @@
                 </div>
 
                 <div class="item box-course">
-                    <img src="<?php echo get_template_directory_uri() . '/img/cc.png' ?>">
+                    <img src="<?php echo get_template_directory_uri().'/img/cc.png' ?>">
                     <h2><a href="#">آموزش طراحی سایت حرفه ای پروژه محور</a> </h2>
                     <div class="desc">
                         <div class="teacher">
@@ -176,7 +178,7 @@
                 </div>
 
                 <div class="item box-course">
-                    <img src="<?php echo get_template_directory_uri() . '/img/ccc.png' ?>">
+                    <img src="<?php echo get_template_directory_uri().'/img/ccc.png' ?>">
                     <h2><a href="#">آموزش طراحی سایت حرفه ای پروژه محور</a> </h2>
                     <div class="desc">
                         <div class="teacher">
@@ -201,7 +203,7 @@
                 </div>
 
                 <div class="item box-course">
-                    <img src="<?php echo get_template_directory_uri() . '/img/ccccc.png' ?>">
+                    <img src="<?php echo get_template_directory_uri().'/img/ccccc.png' ?>">
                     <h2><a href="#">آموزش طراحی سایت حرفه ای پروژه محور</a> </h2>
                     <div class="desc">
                         <div class="teacher">
@@ -226,7 +228,7 @@
                 </div>
 
                 <div class="item box-course">
-                    <img src="<?php echo get_template_directory_uri() . '/img/ccccc.png' ?>">
+                    <img src="<?php echo get_template_directory_uri().'/img/ccccc.png' ?>">
                     <h2><a href="#">آموزش طراحی سایت حرفه ای پروژه محور</a> </h2>
                     <div class="desc">
                         <div class="teacher">
