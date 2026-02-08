@@ -1,26 +1,25 @@
 <?php
 // register post type
-function post_type_pishro_tv()
-{
+function post_type_pishro_tv() {
     $labels = array(
-        'name'               => __('وبسافتTV'),
-        'singular_name'      => __('وبسافتTV'),
-        'menu_name'          => __('وبسافتTV'),
-        'name_admin_bar'     => __('وبسافتTV'),
-        'add_new'            => __(' افزودن جدید'),
-        'add_new_item'       => __('پست مخصوص ویدیوهای آموزشی'),
-        'new_item'           => __('پست جدید'),
-        'edit_item'          => __('ویرایش پست'),
-        'view_item'          => __('مشاهده پست'),
-        'all_items'          => __('همه ویدیوها'),
-        'search_items'       => __('جستجو در بین ویدیوها'),
-        'parent_item_colon'  => __('مادر'),
-        'not_found'          => __('مطلب یافت نشد'),
-        'not_found_in_trash' => __('مطلب در زباله دان یافت نشد')
+        'name'               => __( 'وبسافتTV' ),
+        'singular_name'      => __( 'وبسافتTV' ),
+        'menu_name'          => __( 'وبسافتTV' ),
+        'name_admin_bar'     => __( 'وبسافتTV' ),
+        'add_new'            => __( ' افزودن جدید' ),
+        'add_new_item'       => __( 'پست مخصوص ویدیوهای آموزشی' ),
+        'new_item'           => __( 'پست جدید' ),
+        'edit_item'          => __( 'ویرایش پست' ),
+        'view_item'          => __( 'مشاهده پست' ),
+        'all_items'          => __( 'همه ویدیوها' ),
+        'search_items'       => __( 'جستجو در بین ویدیوها' ),
+        'parent_item_colon'  => __( 'مادر' ),
+        'not_found'          => __( 'مطلب یافت نشد' ),
+        'not_found_in_trash' => __( 'مطلب در زباله دان یافت نشد' )
     );
     $args = array(
         'labels'             => $labels,
-        'description'        => __('Description.', 'your-plugin-textdomain'),
+        'description'        => __( 'Description.', 'your-plugin-textdomain' ),
         'public'             => true,
         'publicly_queryable' => true,
         'show_ui'            => true,
@@ -33,11 +32,11 @@ function post_type_pishro_tv()
         'menu_position'      => null,
         'taxonomies' => array('post_tag'),
         //'taxonomies' => array('post_tag'),
-        'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
     );
-    register_post_type('tv', $args);
+    register_post_type( 'tv', $args );
 }
-add_action('init', 'post_type_pishro_tv');
+add_action( 'init', 'post_type_pishro_tv' );
 
 
 
@@ -45,20 +44,19 @@ add_action('init', 'post_type_pishro_tv');
 
 
 // اضافه کردن تاکسونومی برای پست تایپ وبسافتTV
-function create_taxonomies_for_tv()
-{
+function create_taxonomies_for_tv() {
     $labels = array(
-        'name'              => _x('دسته بندی', 'دسته بندی'),
-        'singular_name'     => _x('دسته بندی پست ها ', 'دسته بندی'),
-        'search_items'      => __('جستجویه دسته'),
-        'all_items'         => __('تمام دسته ها'),
-        'parent_item'       => __('زیر دسته'),
-        'parent_item_colon' => __('Parent Genre:'),
-        'edit_item'         => __('ویرایش دسته'),
-        'update_item'       => __('بروزرسانی دسته'),
-        'add_new_item'      => __('افزودن دسته جدید'),
-        'new_item_name'     => __('نام جدید دسته'),
-        'menu_name'         => __('دسته بندی'),
+        'name'              => _x( 'دسته بندی', 'دسته بندی' ),
+        'singular_name'     => _x( 'دسته بندی پست ها ', 'دسته بندی' ),
+        'search_items'      => __( 'جستجویه دسته' ),
+        'all_items'         => __( 'تمام دسته ها' ),
+        'parent_item'       => __( 'زیر دسته' ),
+        'parent_item_colon' => __( 'Parent Genre:' ),
+        'edit_item'         => __( 'ویرایش دسته' ),
+        'update_item'       => __( 'بروزرسانی دسته' ),
+        'add_new_item'      => __( 'افزودن دسته جدید' ),
+        'new_item_name'     => __( 'نام جدید دسته' ),
+        'menu_name'         => __( 'دسته بندی' ),
     );
 
     $ar = array(
@@ -69,6 +67,6 @@ function create_taxonomies_for_tv()
         'query_var'         => true,
     );
 
-    register_taxonomy('cat_pishro_tv', 'tv', $ar);
+    register_taxonomy( 'cat_pishro_tv', 'tv' , $ar );
 }
-add_action('init', 'create_taxonomies_for_tv');
+add_action( 'init', 'create_taxonomies_for_tv');
