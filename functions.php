@@ -42,11 +42,34 @@ function pishro_widget()
     register_sidebar(array(
         'name'          => __('ناحیه کناری بلاگ'),
         'id'            => 'pishro_blog',
-
         'before_widget' => '<div class="single-widget">',
         'after_widget'  => '</div>',
         'before_title'  => '<h4>',
         'after_title'   => '</h4>',
+    ));
+    register_sidebar(array(
+        'name'          => __('فوتر 1'),
+        'id'            => 'pishro_footer_one',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
+    register_sidebar(array(
+        'name'          => __('فوتر 2'),
+        'id'            => 'pishro_footer_two',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
+    ));
+    register_sidebar(array(
+        'name'          => __('فوتر 3'),
+        'id'            => 'pishro_footer_three',
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
     ));
 }
 add_action('widgets_init', 'pishro_widget');
