@@ -25,7 +25,7 @@ function pishro_setup_theme(){
     add_image_size('tv_large',820,548,true);
     add_image_size('tv_small',265,165,true);
 
-    register_nav_menus(
+    register_nav_menus( 
         array(
             'main-menu' => __( 'جایگاه فهرست اصلی ' ),
             'top-menu' => __( 'جایگاه فهرست بالای سایت' )
