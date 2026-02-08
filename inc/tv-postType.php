@@ -2,7 +2,7 @@
 // register post type
 function post_type_pishro_tv() {
     $labels = array(
-        'name'               => __( 'وبسافتTV' ), 
+        'name'               => __( 'وبسافتTV' ),
         'singular_name'      => __( 'وبسافتTV' ),
         'menu_name'          => __( 'وبسافتTV' ),
         'name_admin_bar'     => __( 'وبسافتTV' ),
